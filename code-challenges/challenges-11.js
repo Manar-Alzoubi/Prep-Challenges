@@ -17,8 +17,11 @@
 
 function square(arr){
     let modifiedArr = arr.map(function(element){
+        
         return element *element;
+
     });
+    return modifiedArr;
     }
 
 // 2) ------------------
@@ -57,9 +60,10 @@ function square(arr){
 //
 
 function fullName(arr) {
-    let userFullnames = users.map(function(element){
+    let userFullnames = arr.map(function(element){
         return (`${element.firstName} ${element.lastName}`) ;
     });
+    return userFullnames;
     }
 
 // 3) ---------------------
@@ -122,14 +126,14 @@ function fullName(arr) {
 
 function gradesAvg(arr) {
     let std1 = arr.map(function(element)
-       {
-         arr.forEach( gradsList);
-          sum= sum+ gradelist[element];
-          let avg = sum /(Array.length-1);
+       {console.log(element);
+         arr.forEach(std1.gradelist);
+          sum= sum+ std1.gradelist[element];
+          let avg = sum /(std1.length-1);
           students[ {"avg": avg}];
        })
-        return std1
-};
+        return std1;
+}
 
 
 // 4) ---------------------
