@@ -59,7 +59,7 @@ const objectCounter = (obj) => {
 // ------------------------
 
 const stringReverse = (str) => {
-    const reducer = (previousValue, currentValue) => str.split (previousValue  currentValue,);
+    const reducer = (previousValue, currentValue) => str.split (previousValue , currentValue,);
     return reducer;
 
 }
