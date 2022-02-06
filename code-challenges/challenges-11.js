@@ -132,12 +132,11 @@ function gradesAvg(arr) {
          element.gradsList.forEach(element1 => {
           sum= sum+ element1;})
           let avg = sum /(element.gradsList.length);
-          element.avg= avg;
+          element.avg=avg;
           return element;
        })
         return std1;
 }
-
 
 // 4) ---------------------
 //
