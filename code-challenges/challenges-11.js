@@ -18,7 +18,7 @@
 function square(arr){
     let modifiedArr = arr.map(function(element){
         
-        return element *element;
+        return element*element;
 
     });
     return modifiedArr;
@@ -125,16 +125,18 @@ function fullName(arr) {
 // -------------
 
 function gradesAvg(arr) {
+     arr.avg =0;
     let std1 = arr.map(function(element)
-       {console.log(element);
-         arr.forEach(std1.gradelist);
-          sum= sum+ std1.gradelist[element];
-          let avg = sum /(std1.length-1);
-          students[ {"avg": avg}];
+       {
+        let sum =0;
+         element.gradsList.forEach(element1 => {
+          sum= sum+ element1;})
+          let avg = sum /(element.gradsList.length);
+          element.avg=avg;
+          return element;
        })
         return std1;
 }
-
 
 // 4) ---------------------
 //
@@ -205,18 +207,22 @@ function gradesAvg(arr) {
 
 
 function studentsResult(arr) {
-         
-                let x = arr[avg];
-                if (x == 'avg') {
-                    arr[x] >= 50;
-                    arr[x] = pass;
-                }
-
-                else 
-                    arr[key] = failed;
-
-           console.log(arr);
-       
-    }
+         arr.result =" ";
+    let modifiedArr = arr.map(function(element){
+        if (element.avg >= 50) {
+            element.result ='Passed';
+        }
+        else 
+            element.result ="Failed";
+            return element;
+    });return modifiedArr;}
+    
+   
 
 module.exports = { square, fullName, gradesAvg, studentsResult };
+
+
+
+
+
+
