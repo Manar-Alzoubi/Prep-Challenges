@@ -27,6 +27,7 @@ const LastWord = (str) => {
     let arr = str.split(' ');
     let x =arr.slice(arr.indexOf(-1));
     return (x.toString());
+
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -41,7 +42,9 @@ const LastWord = (str) => {
 
 const LastWord_2 = (str) => {
     let lastword = str.split(" ");
-    return lastword[lastword.length - 1];}
+    return lastword[lastword.length - 1];
+
+}
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -70,7 +73,7 @@ const replaceWords = (str) => {
    {if(arr[i]== "I")
    {
       let x =arr.indexOf("I"); 
-      arr.splice(x, 1, 'we');
+      arr.splice(x, 1, 'We');
       }
       if(arr[i]== "am"){
           let x =arr.indexOf("am"); 
@@ -87,6 +90,7 @@ const replaceWords = (str) => {
    }
    let str2 = arr.toString().replace(/,/g ,' ');
     return str2;
+
 }
 // -------------------------------------------------------------------------------------------------------
 
