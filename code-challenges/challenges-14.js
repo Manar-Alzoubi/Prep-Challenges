@@ -6,22 +6,31 @@
 // splice: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 // indexOf: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
 // lastIndexOf: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
-
+// join: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+// -------------------------------------------------------------------------------------------------------
+// Challenge 01:
+// Required:
+//
+=======
 // 1) ---------------------
-// 
 // Using the slice and indexOf/lastIndexOf methods, return the last word in a string
 //
 // Note: consider that the string may have one word but never empty
 //
-// Ex: "I did my waiting 12 years of it in Azkaban" ==> "Azkaban"
-// Ex: "Impossible" ==> "Impossible"
+// Input: "I did my waiting 12 years of it in Azkaban"
+// Output: "Azkaban"
 //
-// ------------------------
+// Input: "Impossible"
+// Output: "Impossible"
+//
 
 const LastWord = (str) => {
-    let lastStr= str.splice(-1);
-   return lastStr;
+    let arr = str.split(' ');
+    let x =arr.slice(arr.indexOf(-1));
+    return (x.toString());
 }
+// -------------------------------------------------------------------------------------------------------
+
 // 2) ---------------------
 // 
 //  Hopefully you struggled in the last code challenge, you can try to do the same task using the split method
@@ -41,25 +50,45 @@ const LastWord_2 = (str) => {
 //
 // Note: you may use another method for search (indexOf)
 //
-// Ex: "I thought you had a plan" ==> "We thought you had a plan"
-// Ex: "I was there 3000 years ago" ==> "We were there 3000 years ago"
-// Ex: "I am Venom" ==> "We are Venom"
+// Input:  "I thought you had a plan"
+// Output: "We thought you had a plan"
 //
-// ------------------------
+// Input: "I was there 3000 years ago"
+// Output: "We were there 3000 years ago"
+
+// Input: "I am Venom"
+// Output: "We are Venom"
+//
 
 const replaceWords = (str) => {
-    const array1 = str.split(" ");
-    for(let i=0;i<array1.length; i++)
-    {
-    if(element == "I")
-    array1.splice( index("I", 1, 'we');
-    if(element == "am")
-    array1.splice( indexOf,1, 'are');
-    if(element == "was")
-    array1.splice(index("was"), 1, 'were');
-  str= str +"  ";
-})
+   let arr = str.split(" ");
+    console.log(arr);
+   let i =0;
+   while(i != arr.length )
+   {if(arr[i]== "I")
+   {
+      let x =arr.indexOf("I"); 
+      arr.splice(x, 1, 'We');
+      }
+      if(arr[i]== "am"){
+          let x =arr.indexOf("am"); 
+      arr.splice(x, 1, 'are');
+   
+      }
+       if(arr[i]== "was"){
+          let x =arr.indexOf("was"); 
+      arr.splice(x, 1, 'were');
+   
+      }
+   
+   i++;
+   }
+   let str2 = arr.toString().replace(/,/g ,' ');
+    return str2;
+
 }
+// -------------------------------------------------------------------------------------------------------
+
 // 4) ---------------------
 // 
 // Write a function that "joins" the array of words together and put a comma "," after every five words
@@ -68,15 +97,7 @@ const replaceWords = (str) => {
 // ------------------------
 
 const arrToStr = (arr) => {
-    let str =""
-   for (leti =0; i<arr.length-1; i++)
-   {
-        str= str+ " "
-        if( counter %5 !=0)
-        str2 = str2+(str.indexOf(i)) ;
-        else str2 = str2+ (str.indexOf(i))+" " ;
-      console.log("hi");
-   }
+    // write your code here
 }
 
 // 5) ---------------------
@@ -92,17 +113,6 @@ const arrToStr = (arr) => {
 // ------------------------
 
 const letterCounter = (str) => {
-    
-    let count =0;
-    
-for(let i =0; i<str.length-1; i++)
-{
-  If (str.indexOf(i) ==str.indexOf(i+1) ){
-  counter++;
-str2 = str2+(str.indexOf(i)) ;
-}
-else (str2 = str2+ (str.indexOf(i))+" ") ;
-
-}
+    // write your code here
 }
 module.exports = { LastWord, LastWord_2, replaceWords, arrToStr, letterCounter };
