@@ -75,7 +75,7 @@ const arrToStr = (arr) => {
         if( counter %5 !=0)
         str2 = str2+(str.indexOf(i)) ;
         else str2 = str2+ (str.indexOf(i))+" " ;
-
+      console.log("hi");
    }
 }
 
