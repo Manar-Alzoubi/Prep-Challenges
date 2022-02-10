@@ -220,4 +220,6 @@ function studentsResult(arr) {
         return avgArray;
 }
 
+
+
 module.exports = { square, fullName, gradesAvg, studentsResult };
