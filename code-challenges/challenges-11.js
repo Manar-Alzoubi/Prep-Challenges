@@ -18,7 +18,7 @@
 function square(arr){
     let modifiedArr = arr.map(function(element){
         
-        return element *element;
+        return element*element;
 
     });
     return modifiedArr;
@@ -125,6 +125,7 @@ function fullName(arr) {
 // -------------
 
 function gradesAvg(arr) {
+
     let avg =0;
     let avgArray=  arr.map((stud, ind) => {
         let sum = stud.gradsList.reduce(
@@ -135,6 +136,9 @@ function gradesAvg(arr) {
    return avgArray;
    
 }
+
+
+
 
 
 
@@ -207,6 +211,7 @@ function gradesAvg(arr) {
 
 
 function studentsResult(arr) {
+
         let avgArray=  arr.map((stud, ind) => {
             if (stud.avg >= 50) {
                 stud.result= 'Passed';
@@ -220,4 +225,14 @@ function studentsResult(arr) {
         return avgArray;
 }
 
+    
+   
+
 module.exports = { square, fullName, gradesAvg, studentsResult };
+
+
+
+
+
+
+
