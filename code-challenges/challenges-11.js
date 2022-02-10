@@ -18,7 +18,7 @@
 function square(arr){
     let modifiedArr = arr.map(function(element){
         
-        return element *element;
+        return element*element;
 
     });
     return modifiedArr;
@@ -138,6 +138,7 @@ function gradesAvg(arr) {
 
 
 
+
 // 4) ---------------------
 //
 // Using the previous function result, determine if the student pass or failed,
@@ -220,6 +221,14 @@ function studentsResult(arr) {
         return avgArray;
 }
 
-
+    
+   
 
 module.exports = { square, fullName, gradesAvg, studentsResult };
+
+
+
+
+
+
+
