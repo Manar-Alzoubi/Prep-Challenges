@@ -125,18 +125,22 @@ function fullName(arr) {
 // -------------
 
 function gradesAvg(arr) {
-     arr.avg =0;
-    let std1 = arr.map(function(element)
-       {
-        let sum =0;
-         element.gradsList.forEach(element1 => {
-          sum= sum+ element1;})
-          let avg = sum /(element.gradsList.length);
-          element.avg=avg;
-          return element;
-       })
-        return std1;
+
+    let avg =0;
+    let avgArray=  arr.map((stud, ind) => {
+        let sum = stud.gradsList.reduce(
+      ( previousValue, currentValue ) => previousValue + currentValue, 0) 
+      stud["avg"] = sum/stud.gradsList.length ;
+    return  stud;
+    })
+   return avgArray;
+   
 }
+
+
+
+
+
 
 // 4) ---------------------
 //
@@ -207,19 +211,25 @@ function gradesAvg(arr) {
 
 
 function studentsResult(arr) {
-         arr.result =" ";
-    let modifiedArr = arr.map(function(element){
-        if (element.avg >= 50) {
-            element.result ='Passed';
-        }
-        else 
-            element.result ="Failed";
-            return element;
-    });return modifiedArr;}
+
+        let avgArray=  arr.map((stud, ind) => {
+            if (stud.avg >= 50) {
+                stud.result= 'Passed';
+            }
+
+            else 
+                stud.result = 'Failed';
+
+       return stud;
+        })
+        return avgArray;
+}
+
     
    
 
 module.exports = { square, fullName, gradesAvg, studentsResult };
+
 
 
 
